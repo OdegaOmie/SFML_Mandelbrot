@@ -26,8 +26,8 @@
 #include <complex>
 #include "MandelBrotGenerator.h"
 
-int width = 400;
-int height = 400;
+int width = 300;
+int height = 300;
 float zoom = 1;
 
 
@@ -52,7 +52,7 @@ int main()
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 
-
+	Vector2f mousePos;
 
 	// Start game loop 
 	while (App.isOpen())
@@ -68,8 +68,20 @@ int main()
 			// Escape key : exit 
 			if ((Event.type == sf::Event::KeyPressed) && (Event.key.code == sf::Keyboard::Escape))
 				App.close();
-		}
 
+
+		}
+		mousePos = Vector2f(Mouse::getPosition(App).x, Mouse::getPosition(App).y);
+
+		bool changePos = Mouse::isButtonPressed(Mouse::Left);
+		bool zoomIn = Keyboard::isKeyPressed(Keyboard::A);
+		bool zoomOut = Keyboard::isKeyPressed(Keyboard::D);
+
+
+		if (zoomIn) mandel.ChangeScale(true);
+		else if (zoomOut) mandel.ChangeScale(false);
+
+		if (changePos) mandel.ChangeFocus(mousePos);
 		//Prepare for drawing 
 		// Clear color and depth buffer 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -82,11 +94,14 @@ int main()
 		if (!mandel.getReady()) {
 			mandel.run();
 		}
+		else {
+			App.draw(mandel.getSprite());
+		}
 		
 
 
 		///HERE BE STUFF////
-		App.draw(mandel.getSprite());
+		
 
 		App.display();
 	}

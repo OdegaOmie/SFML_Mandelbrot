@@ -1,0 +1,16 @@
+﻿  Mandelbrot_Simulation.cpp
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(30): warning C4244: 'initializing': conversion from 'const int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(33): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(43): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(44): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(64): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(78): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(84): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(84): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(126): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(151): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrot_simulation.cpp(74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrot_simulation.cpp(84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrot_simulation.cpp(88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Mandelbrot_Simulation.vcxproj -> C:\Users\ECO\Desktop\SFMLMandelbrot\SFML_Mandelbrot\Mandelbrot_Simulation\Debug\Mandelbrot_Simulation.exe
+  Mandelbrot_Simulation.vcxproj -> C:\Users\ECO\Desktop\SFMLMandelbrot\SFML_Mandelbrot\Mandelbrot_Simulation\Debug\Mandelbrot_Simulation.pdb (Full PDB)
