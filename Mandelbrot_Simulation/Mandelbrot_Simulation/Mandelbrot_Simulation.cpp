@@ -28,7 +28,7 @@
 
 int width = 300;
 int height = 300;
-float zoom = 1;
+float zoom = 2;
 
 
 
@@ -77,9 +77,14 @@ int main()
 		bool zoomIn = Keyboard::isKeyPressed(Keyboard::A);
 		bool zoomOut = Keyboard::isKeyPressed(Keyboard::D);
 
+		bool zoomInMega = Keyboard::isKeyPressed(Keyboard::W);
+		bool zoomOutMega = Keyboard::isKeyPressed(Keyboard::S);
+
 
 		if (zoomIn) mandel.ChangeScale(true);
 		else if (zoomOut) mandel.ChangeScale(false);
+		else if (zoomInMega) mandel.ChangeScaleSuper(false);
+		else if (zoomOutMega) mandel.ChangeScaleSuper(false);
 
 		if (changePos) mandel.ChangeFocus(mousePos);
 		//Prepare for drawing 

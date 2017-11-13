@@ -51,7 +51,7 @@ public:
 		{
 			for (int j = 1; j < height - 1; j++)
 			{
-				image.setPixel(i, j, colorGradient(get(i, j) / 1000));
+				image.setPixel(i, j, colorGradient(get(i, j) / 100));
 			}
 		}
 		texture.loadFromImage(image);
@@ -99,7 +99,10 @@ public:
 	{
 		if (scale != 1) 
 		{
-			focusPoint.x = (_mousePos.x - (width / 2)) * ((4 / scale) / height);
+			focusPoint.x += ( _mousePos.x - (width / 2)) * ((4 / scale) / width);
+
+
+
 			if (focusPoint.x - (2 / scale) < -2) 
 			{
 				focusPoint.x = -2 + (2 / scale);
@@ -108,7 +111,9 @@ public:
 			{
 				focusPoint.x = 2 - (2 / scale);
 			}
-			focusPoint.y = ((4 / scale) / height) * (_mousePos.y + (height / 2));
+			focusPoint.y += (_mousePos.y - (height / 2)) * ((4 / scale) / height);
+
+
 			if (focusPoint.y - (2 / scale) < -2)
 			{
 				focusPoint.y = -2 + (2 / scale);
@@ -116,6 +121,22 @@ public:
 			else if (focusPoint.x + (2 / scale) > 2)
 			{
 				focusPoint.y = 2 - (2 / scale);
+			}
+		}
+		initData();
+	}
+
+	void ChangeScaleSuper(bool _dir)
+	{
+		if (_dir)
+		{
+			scale += 1000;
+		}
+		else
+		{
+			if (scale != 1)
+			{
+				scale -= 1000;
 			}
 		}
 		initData();
@@ -153,7 +174,7 @@ public:
 				std::complex<float> c(x, y);
 				std::complex<float> z(0);
 				z = (z * z) + c;
-				while (abs(z) < 2.0 && count < 1000) {
+				while (abs(z) < 2.0 && count < 100) {
 					z = (z * z) + c;
 					count++;
 				}
