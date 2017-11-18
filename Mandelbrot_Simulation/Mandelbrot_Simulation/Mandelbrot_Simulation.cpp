@@ -20,27 +20,27 @@
 
 
 #include <iostream> 
-#include <vector>
 #include "SFML/Graphics.hpp" 
 #include "SFML/OpenGL.hpp" 
-#include <complex>
+#include "Globals.h"
 #include "MandelBrotGenerator.h"
 
-int width = 300;
-int height = 300;
-float zoom = 2;
+using namespace sf;
+
 
 
 
 int main()
 {
+	int width = 1024;
+	int height = 768;
+
+
+	Globals g = Globals(width, height);
 
 
 	sf::RenderWindow App(sf::VideoMode(width, height, 32), "SFML OpenGL");
-
-
-	MandelBrotGenerator mandel = MandelBrotGenerator(width, height, zoom);
-
+	App.setPosition(sf::Vector2i(1444, -320));
 
 
 	glClearDepth(1.f);
@@ -53,6 +53,9 @@ int main()
 	glLoadIdentity();
 
 	Vector2f mousePos;
+
+
+
 
 	// Start game loop 
 	while (App.isOpen())
@@ -81,12 +84,15 @@ int main()
 		bool zoomOutMega = Keyboard::isKeyPressed(Keyboard::S);
 
 
-		if (zoomIn) mandel.ChangeScale(true);
-		else if (zoomOut) mandel.ChangeScale(false);
-		else if (zoomInMega) mandel.ChangeScaleSuper(false);
-		else if (zoomOutMega) mandel.ChangeScaleSuper(false);
+		//if (zoomIn) { scale += 1; }
+		//else if (zoomOut) scale -= 1;
+		//else if (zoomInMega) scale += 10;
+		//else if (zoomOutMega) scale -= 10;
 
-		if (changePos) mandel.ChangeFocus(mousePos);
+		//if (changePos) { 
+		//	ChangeFocus(mousePos); 
+		//	initialise();
+		//}
 		//Prepare for drawing 
 		// Clear color and depth buffer 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -96,16 +102,6 @@ int main()
 		glLoadIdentity();
 
 		App.clear(sf::Color::Black);
-		if (!mandel.getReady()) {
-			mandel.run();
-		}
-		else {
-			App.draw(mandel.getSprite());
-		}
-		
-
-
-		///HERE BE STUFF////
 		
 
 		App.display();
@@ -113,3 +109,7 @@ int main()
 
 	return EXIT_SUCCESS;
 }
+
+
+
+

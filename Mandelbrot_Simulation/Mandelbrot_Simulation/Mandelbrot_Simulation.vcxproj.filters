@@ -27,6 +27,18 @@
     <ClInclude Include="MandelBrotGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AbstractTask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FillLineTask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadFarm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
