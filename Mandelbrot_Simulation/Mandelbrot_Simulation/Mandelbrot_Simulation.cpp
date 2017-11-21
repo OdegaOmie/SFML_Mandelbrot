@@ -24,6 +24,7 @@
 #include "SFML/OpenGL.hpp" 
 #include "Globals.h"
 #include "MandelBrotGenerator.h"
+#include "ThreadManager.h"
 
 using namespace sf;
 
@@ -32,15 +33,20 @@ using namespace sf;
 
 int main()
 {
-	int width = 1024;
-	int height = 768;
+	int NUM_CELLS_X = 1024;
+	int NUM_CELLS_Y = 768;
 
+	int SCREEN_X = 1024;
+	int SCREEN_Y = 768;
 
-	Globals g = Globals(width, height);
-
-
-	sf::RenderWindow App(sf::VideoMode(width, height, 32), "SFML OpenGL");
-	App.setPosition(sf::Vector2i(1444, -320));
+	ThreadManager* tmangr = new ThreadManager();
+	std::shared_ptr<Globals> g = Globals::sharedData(NUM_CELLS_X, NUM_CELLS_Y, std::thread::hardware_concurrency());
+	MandelBrotGenerator mgenerator = MandelBrotGenerator();
+	float scale_X = NUM_CELLS_X / NUM_CELLS_X;
+	float scale_Y = NUM_CELLS_X / NUM_CELLS_Y;
+	sf::RenderWindow App(sf::VideoMode(SCREEN_X, SCREEN_Y, 32), "SFML OpenGL");
+	
+	//App.setPosition(sf::Vector2i(1444, -320));
 
 
 	glClearDepth(1.f);
@@ -53,8 +59,8 @@ int main()
 	glLoadIdentity();
 
 	Vector2f mousePos;
-
-
+	bool computeSet =  true;
+	sf::Sprite s = Sprite();
 
 
 	// Start game loop 
@@ -83,16 +89,17 @@ int main()
 		bool zoomInMega = Keyboard::isKeyPressed(Keyboard::W);
 		bool zoomOutMega = Keyboard::isKeyPressed(Keyboard::S);
 
+		if (zoomIn) g->ChangeScale(1);
+		else if (zoomOut) g->ChangeScale(-1);
+		else if (zoomInMega) g->ChangeScale(10);
+		else if (zoomOutMega) g->ChangeScale(-10);
 
-		//if (zoomIn) { scale += 1; }
-		//else if (zoomOut) scale -= 1;
-		//else if (zoomInMega) scale += 10;
-		//else if (zoomOutMega) scale -= 10;
-
-		//if (changePos) { 
-		//	ChangeFocus(mousePos); 
-		//	initialise();
-		//}
+		if (changePos) { 
+			g->ChangeFocus(mousePos);
+		}
+		if (zoomIn || zoomOut || zoomInMega || zoomOutMega || changePos) {
+			computeSet = true;
+		}
 		//Prepare for drawing 
 		// Clear color and depth buffer 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -102,8 +109,25 @@ int main()
 		glLoadIdentity();
 
 		App.clear(sf::Color::Black);
-		
+		if (computeSet) 
+		{
+			
+			for (int i = 0; i < g->SCREENX; i++) {
+				tmangr->add_task(mgenerator.getTask(i));
+			}
+			tmangr->create_workers(g->MAXTHREADS);
+			computeSet = false;
+		}
+		if (tmangr->is_done()) {
+			tmangr->join_workers();
+			mgenerator.update();
+			s = mgenerator.getSprite();
+  			//ssetScale(sf::Vector2f(scale_X, scale_Y));
+			s.scale(scale_X, scale_Y);
+		}
 
+
+		App.draw(s);
 		App.display();
 	}
 

@@ -1,50 +1,21 @@
 ﻿  Mandelbrot_Simulation.cpp
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(24): error C2039: 'mutex': is not a member of 'std'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(1175): note: see declaration of 'std'
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(24): error C3646: '_mu_1': unknown override specifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(24): error C2059: syntax error: ','
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(24): error C2238: unexpected token(s) preceding ';'
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(180): error C2039: 'thread': is not a member of 'std'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(1175): note: see declaration of 'std'
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(180): error C2065: 'thread': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(180): error C2923: 'std::vector': 'thread' is not a valid template type argument for parameter '_Ty'
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(180): error C3203: 'allocator': unspecialized class template can't be used as a template argument for template parameter '_Alloc', expected a real type
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(54): error C2440: 'return': cannot convert from 'float *' to 'float'
-  c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(54): note: There is no context in which this conversion is possible
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(61): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(61): error C2440: '=': cannot convert from 'float' to 'float *'
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(78): error C2039: 'complex': is not a member of 'std'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(1175): note: see declaration of 'std'
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(78): error C2065: 'complex': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(78): error C2062: type 'float' unexpected
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(82): error C2039: 'lock_guard': is not a member of 'std'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(1175): note: see declaration of 'std'
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(82): error C2065: 'lock_guard': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(82): error C2039: 'mutex': is not a member of 'std'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(1175): note: see declaration of 'std'
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(82): error C2065: 'mutex': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(82): error C2065: '_mu_2': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(82): error C3861: 'gaurd': identifier not found
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(85): error C2065: '_ledger': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(89): error C2065: '_ledger': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(99): error C2065: 'c': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(100): error C2065: 'z': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(101): error C2065: 'z': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(101): error C2065: 'c': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(102): error C2065: 'z': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(103): error C2065: 'z': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(103): error C2065: 'c': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(107): error C2039: 'lock_guard': is not a member of 'std'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(1175): note: see declaration of 'std'
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(107): error C2065: 'lock_guard': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(107): error C2039: 'mutex': is not a member of 'std'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(1175): note: see declaration of 'std'
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(107): error C2065: 'mutex': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(107): error C2065: '_mu_1': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(107): error C3861: 'gaurd': identifier not found
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(108): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(118): warning C4244: 'initializing': conversion from 'const int' to 'float', possible loss of data
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(128): error C2065: '_ledger': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(131): error C2065: '_ledger': undeclared identifier
-c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrot_simulation.cpp(77): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\globals.h(56): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\globals.h(60): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\globals.h(67): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\globals.h(71): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\filllinetask.h(48): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(46): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrot_simulation.cpp(42): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrot_simulation.cpp(43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrot_simulation.cpp(80): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\utility(200): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(90): note: see reference to function template instantiation 'std::pair<float *,float>::pair<float*,int,void,0>(std::pair<float *,int> &&) noexcept' being compiled
+  c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\mandelbrotgenerator.h(90): note: see reference to function template instantiation 'std::pair<float *,float>::pair<float*,int,void,0>(std::pair<float *,int> &&) noexcept' being compiled
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(439): note: see reference to class template instantiation 'std::_Ptr_base<_Ty>' being compiled
+          with
+          [
+              _Ty=Globals
+          ]
+  c:\users\eco\desktop\sfmlmandelbrot\sfml_mandelbrot\mandelbrot_simulation\mandelbrot_simulation\globals.h(26): note: see reference to class template instantiation 'std::shared_ptr<Globals>' being compiled
+  Mandelbrot_Simulation.vcxproj -> C:\Users\ECO\Desktop\SFMLMandelbrot\SFML_Mandelbrot\Mandelbrot_Simulation\Debug\Mandelbrot_Simulation.exe
+  Mandelbrot_Simulation.vcxproj -> C:\Users\ECO\Desktop\SFMLMandelbrot\SFML_Mandelbrot\Mandelbrot_Simulation\Debug\Mandelbrot_Simulation.pdb (Full PDB)

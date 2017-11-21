@@ -46,8 +46,8 @@ public:
 
 		done = true;
 
-		for (int i = 0; i < threads.size(); i++) {
-			threads[i]->join();
+		for (auto& t : threads) {
+			t->join();
 		}
 
 		threads.clear();
@@ -69,19 +69,21 @@ private:
 	void run() {
 		while (!done)
 		{
-			AbstractTask* t;
-			if (!tasks.empty())
+			std::lock_guard<std::mutex> gaurd(_mu_1);
 			{
-				std::lock_guard<std::mutex> gaurd(_mu_1);
+				if (!tasks.empty())
 				{
-					t = tasks.front();
-					tasks.pop();
-				}
-				if (t)
-					t->run();
-			}
+					AbstractTask* t;
 
-			delete t;
+						t = tasks.front();
+						tasks.pop();
+
+					if (t)
+						t->run();
+
+					delete t;
+				}
+			}
 		}
 	};
 

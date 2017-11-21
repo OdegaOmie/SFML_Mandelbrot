@@ -2,6 +2,7 @@
 #include <vector>
 #include "SFML/Graphics.hpp" 
 #include "SFML/OpenGL.hpp"
+#include "FillLineTask.h"
 using namespace sf;
 
 
@@ -17,8 +18,7 @@ private:
 	Texture texture;
 	Sprite sprite;
 	std::shared_ptr<Globals> ptr;
-
-
+	 
 
 
 	Color colorGradient(float const& x)
@@ -41,64 +41,53 @@ private:
 		return sprite;
 	}
 
-	float get(int const& i, int const& j)
+	float get(int const& x, int const& y) 
 	{
-		if (i >= 0 && i <ptr->SCREENX && j >= 0 && j<ptr->SCREENY)
-			return pixel_data[i + (j - 1)*(ptr->SCREENY)];
-		else return 0;
+		int  t = pixel_data[x][y];
+		return pixel_data[x][y];
 	}
-
-	void set(int i, int  j, float _coeff)
-	{
-		if (i>=0 && i <ptr->SCREENX && j>=0 && j<ptr->SCREENY)
-			pixel_data[i + infClamp(j - 1, 0)*ptr->SCREENY] = _coeff;
-	}
-
-	float infClamp(float value, float min)
-	{
-		float result;
-		if (value < min)
-			result = min;
-		else
-			result = value;
-		return result;
-	}
-
-
-
-public:
-
-	MandelBrotGenerator()
-	{
-		ptr = Globals::sharedData();
-	};
 
 	void initialise()
 	{
-		
-		pixel_data.clear();
-		pixel_data.resize(ptr->SCREENX*ptr->SCREENY);
-		for (int i = 0; i < ptr->SCREENX; i++)
-		{
-			for (int j = 0; j < ptr->SCREENY; j++)
-			{
-				set(i, j, 0);
-			}
+
+		for (int i = 0; i < ptr->SCREENX; i++) {
+			pixel_data.push_back(new float[ptr->SCREENY]);
 		}
 
 		image.create(ptr->SCREENX, ptr->SCREENY, Color::Black);
+		//int a = ptr->SCREENX;
+		//int b = ptr->SCREENY;
+		//image.create(1024,768, Color::Black);
+
+
 		texture.loadFromImage(image);
 		sprite.setTexture(texture, true);
 		colours.loadFromFile("color.jpg");
 	}
 
-	void run()
-	{
 
+public:
+
+
+	MandelBrotGenerator()
+	{
+		ptr = Globals::sharedData();
+		initialise();
+	};
+
+
+
+	void update()
+	{
+		setSprite();
 	}
 
 	Sprite& getSprite() {
 		return sprite;
+	}
+
+	FillLineTask* getTask(int i) {
+		return new FillLineTask(std::make_pair(pixel_data[i], i));
 	}
 
 };
